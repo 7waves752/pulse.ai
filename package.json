@@ -1,0 +1,13 @@
+{
+  "name": "pulse-ai",
+  "version": "1.0.0",
+  "description": "Pulse.AI website with n8n chat",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
