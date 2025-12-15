@@ -157,7 +157,7 @@
                     flex: 1;
                     overflow-y: auto;
                     padding: 20px;
-                    background: #f8f9fa;
+                    background: #000000ff;
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
