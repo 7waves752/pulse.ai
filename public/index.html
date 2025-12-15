@@ -175,41 +175,41 @@
     <!-- JavaScript для анимаций -->
     <script src="script.js"></script>
     
-    <!-- N8N Chat Widget -->
-    <script type="module">
-        (async () => {
-            try {
-                const { createChat } = await import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js');
-                
-                window.chatInstance = createChat({
-                    webhookUrl: window.location.origin + '/api/n8n-chat',
-                    initialMessages: ['Привет! Я ИИ ассистент Pulse.AI 🚀'],
-                    i18n: {
-                        en: {
-                            title: 'Pulse.AI Assistant',
-                            subtitle: 'Спросите меня о ИИ агентах',
-                            footer: '',
-                            getStarted: 'Начать чат',
-                            inputPlaceholder: 'Напишите сообщение...'
-                        }
-                    },
-                    theme: {
-                        primaryColor: '#ff6b35'
-                    }
-                });
-                
-                console.log('✅ N8N Chat загружен');
-                
-                // Функция для открытия чата
-                window.openChat = function() {
-                    const chatButton = document.querySelector('[data-key]');
-                    if (chatButton) chatButton.click();
-                };
-                
-            } catch (error) {
-                console.error('❌ Ошибка загрузки чата:', error);
+    <!-- КРАСИВЫЙ N8N ЧАТ ВИДЖЕТ -->
+    <!-- Конфигурация виджета -->
+    <script>
+        window.ChatWidgetConfig = {
+            webhook: {
+                url: window.location.origin + '/api/n8n-chat',
+                route: 'chat'
+            },
+            branding: {
+                logo: '',  // Можешь добавить свой логотип
+                name: 'Pulse.AI',
+                welcomeText: 'Привет 👋 Чем могу помочь?',
+                responseTimeText: 'Мы обычно отвечаем мгновенно'
+            },
+            style: {
+                primaryColor: '#ff6b35',      // Твой оранжевый
+                secondaryColor: '#e8551e',    // Тёмно-оранжевый
+                position: 'right',             // СПРАВА!
+                backgroundColor: '#ffffff',
+                fontColor: '#333333'
             }
-        })();
+        };
+        
+        // Функция для открытия чата
+        window.openChat = function() {
+            const chatButton = document.getElementById('chat-button');
+            if (chatButton) chatButton.click();
+        };
+    </script>
+    
+    <!-- Загрузка виджета -->
+    <script src="https://cdn.jsdelivr.net/gh/juansebsol/n8n-chatbot-template@latest/chat-widget.js"></script>
+    
+    <script>
+        console.log('✅ Pulse.AI с красивым n8n чатом загружен!');
     </script>
 </body>
 </html>
