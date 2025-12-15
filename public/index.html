@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse.AI — AI Agents for Business</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                PULSE<span class="ai">.AI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features">Возможности</a></li>
+                <li><a href="#pricing">Цены</a></li>
+                <li><a href="#contact">Контакт</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                Следующее поколение ИИ
+            </div>
+            <h1 class="hero-title">
+                Автоматизируйте<br>
+                <span class="gradient">Будущее</span>
+            </h1>
+            <p class="hero-description">
+                Мощные ИИ агенты, которые работают 24/7, обрабатывают запросы клиентов 
+                и масштабируют ваш бизнес без границ.
+            </p>
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">
+                    Начать
+                </button>
+                <button class="btn btn-secondary" onclick="openChat()">
+                    Попробовать
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="section-header fade-in">
+            <h2 class="section-title">
+                Возможности
+            </h2>
+            <p class="section-subtitle">
+                Технологии будущего доступны сегодня
+            </p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card fade-in delay-1">
+                <div class="feature-icon">🧠</div>
+                <h3>Умное Обучение</h3>
+                <p>Агенты учатся на каждом взаимодействии, становясь умнее с каждым днём</p>
+            </div>
+            <div class="feature-card fade-in delay-2">
+                <div class="feature-icon">⚡</div>
+                <h3>Мгновенный Ответ</h3>
+                <p>Обработка тысяч запросов одновременно без задержек</p>
+            </div>
+            <div class="feature-card fade-in delay-3">
+                <div class="feature-icon">🔗</div>
+                <h3>Лёгкая Интеграция</h3>
+                <p>API, вебхуки, готовые виджеты — подключайтесь за 5 минут</p>
+            </div>
+            <div class="feature-card fade-in delay-4">
+                <div class="feature-icon">🌐</div>
+                <h3>Мультиязычность</h3>
+                <p>Общение на 50+ языках с сохранением контекста</p>
+            </div>
+            <div class="feature-card fade-in delay-5">
+                <div class="feature-icon">🔒</div>
+                <h3>Безопасность</h3>
+                <p>Шифрование данных, соответствие GDPR, полный контроль</p>
+            </div>
+            <div class="feature-card fade-in delay-6">
+                <div class="feature-icon">📊</div>
+                <h3>Аналитика</h3>
+                <p>Детальная статистика, инсайты, рекомендации</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <div class="section-header fade-in">
+            <h2 class="section-title">
+                Тарифы
+            </h2>
+            <p class="section-subtitle">
+                Выберите план под ваши задачи
+            </p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card fade-in delay-1">
+                <h3>Старт</h3>
+                <div class="price">₽4,990</div>
+                <ul>
+                    <li>1 ИИ агент</li>
+                    <li>1,000 запросов/мес</li>
+                    <li>Email поддержка</li>
+                    <li>Базовая аналитика</li>
+                </ul>
+                <button class="btn btn-secondary" style="width: 100%;">
+                    Выбрать
+                </button>
+            </div>
+            
+            <div class="pricing-card featured fade-in delay-2">
+                <h3>Бизнес</h3>
+                <div class="price">₽14,990</div>
+                <ul>
+                    <li>5 ИИ агентов</li>
+                    <li>10,000 запросов/мес</li>
+                    <li>Приоритетная поддержка</li>
+                    <li>Продвинутая аналитика</li>
+                    <li>Кастомизация</li>
+                </ul>
+                <button class="btn btn-primary" style="width: 100%;">
+                    Выбрать
+                </button>
+            </div>
+            
+            <div class="pricing-card fade-in delay-3">
+                <h3>Энтерпрайз</h3>
+                <div class="price" style="font-size: 32px;">По запросу</div>
+                <ul>
+                    <li>Неограниченно агентов</li>
+                    <li>Неограниченно запросов</li>
+                    <li>Персональный менеджер</li>
+                    <li>SLA гарантии</li>
+                    <li>On-premise</li>
+                </ul>
+                <button class="btn btn-secondary" style="width: 100%;">
+                    Связаться
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="text-align: center;">
+        <div class="section-header fade-in">
+            <h2 class="section-title">
+                Остались вопросы?
+            </h2>
+            <p class="section-subtitle" style="margin-bottom: 40px;">
+                Свяжитесь с нами
+            </p>
+        </div>
+        <div class="fade-in" style="max-width: 600px; margin: 0 auto;">
+            <p style="font-size: 18px; color: #999; margin-bottom: 20px;">
+                Email: <a href="mailto:hello@pulse.ai" style="color: #ff6b35; text-decoration: none;">hello@pulse.ai</a>
+            </p>
+            <p style="font-size: 18px; color: #999;">
+                Telegram: <a href="https://t.me/pulseai_support" style="color: #ff6b35; text-decoration: none;">@pulseai_support</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Pulse.AI — All rights reserved</p>
+    </footer>
+
+    <!-- JavaScript для анимаций -->
+    <script src="script.js"></script>
+    
+    <!-- N8N Chat Widget -->
+    <script type="module">
+        (async () => {
+            try {
+                const { createChat } = await import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js');
+                
+                window.chatInstance = createChat({
+                    webhookUrl: window.location.origin + '/api/n8n-chat',
+                    initialMessages: ['Привет! Я ИИ ассистент Pulse.AI 🚀'],
+                    i18n: {
+                        en: {
+                            title: 'Pulse.AI Assistant',
+                            subtitle: 'Спросите меня о ИИ агентах',
+                            footer: '',
+                            getStarted: 'Начать чат',
+                            inputPlaceholder: 'Напишите сообщение...'
+                        }
+                    },
+                    theme: {
+                        primaryColor: '#ff6b35'
+                    }
+                });
+                
+                console.log('✅ N8N Chat загружен');
+                
+                // Функция для открытия чата
+                window.openChat = function() {
+                    const chatButton = document.querySelector('[data-key]');
+                    if (chatButton) chatButton.click();
+                };
+                
+            } catch (error) {
+                console.error('❌ Ошибка загрузки чата:', error);
+            }
+        })();
+    </script>
+</body>
+</html>
