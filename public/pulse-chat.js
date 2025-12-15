@@ -157,7 +157,7 @@
                     flex: 1;
                     overflow-y: auto;
                     padding: 20px;
-                    background: #000000ff;
+                    background: #ffffffff;
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
@@ -207,6 +207,7 @@
                     border-radius: 18px;
                     background: white;
                     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+                    color: #000000ff;
                 }
                 
                 .message.user .message-bubble {
