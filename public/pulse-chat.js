@@ -10,7 +10,7 @@
         botAvatar: '⚡',
         autoOpen: true,
         autoOpenDelay: 2000,
-        initialMessage: 'Привет! 👋 Я ИИ-ассистент Pulse.AI. Чем могу помочь?'
+        initialMessage: 'Привет! 👋 Я ИИ-ассистент Pulse.AI.<br><br>Для продолжения работы с чатом, пожалуйста, подтвердите своё согласие с нашей <a href="/privacy-policy.html" target="_blank" style="color: #ff6b35; text-decoration: underline;">Политикой конфиденциальности</a>.<br><br>Вы согласны на обработку персональных данных в соответствии с политикой?'
     };
 
     let sessionId = generateSessionId();
@@ -70,13 +70,13 @@
                     animation: none;
                 }
                 
-                /* Окно чата */
+                /* Окно чата - УВЕЛИЧЕНО В 2 РАЗА */
                 .chat-window {
                     position: absolute;
                     bottom: 80px;
                     right: 0;
-                    width: 380px;
-                    height: 550px;
+                    width: 760px;
+                    height: 650px;
                     background: #fff;
                     border-radius: 20px;
                     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
@@ -157,7 +157,7 @@
                     flex: 1;
                     overflow-y: auto;
                     padding: 20px;
-                    background: #747373ff;
+                    background: #f5f5f5;
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
@@ -207,7 +207,17 @@
                     border-radius: 18px;
                     background: white;
                     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-                    color: #000000ff;
+                    color: #333;
+                    line-height: 1.5;
+                }
+                
+                .message-bubble a {
+                    color: ${config.primaryColor};
+                    text-decoration: underline;
+                }
+                
+                .message-bubble a:hover {
+                    opacity: 0.8;
                 }
                 
                 .message.user .message-bubble {
@@ -413,7 +423,7 @@
             chatWindow.classList.add('visible');
             toggleBtn.classList.add('open');
             
-            // Отправляем приветствие если чат пустой
+            // Отправляем приветствие с запросом согласия если чат пустой
             const messages = document.getElementById('chat-messages');
             if (messages.children.length === 0) {
                 setTimeout(() => {
